@@ -54,5 +54,5 @@
 						result += resArray[i];
 				}
 				
-					printf(" Your result is now: %d", result);
+					printf("The result is: %d", result);
 		}
