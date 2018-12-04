@@ -1,21 +1,43 @@
 #include <stdio.h>
 #include <math.h>
+#include <stdlib.h>
+#include <string.h>
+
+#define MAX 100
+
 
 	int calculate(int degreeCount, int pArray[], int cArray[], int resArray[], int xVal);
 
+
 	void main() {
+		
 		int xValue, degree = 0, i, active = 1;
+		char inputString[MAX];
 		
 			printf("************Polynomial calculator************");
 			
-			/* Asks the user for degree of polynomial */
 			
+			/* Loop starts here again */
 			while (active != 0) {
 			
 			
 			printf("\n\nWhat is the highest power of x: ");
-			scanf("%d", &degree);
+			scanf("%s", &inputString);
 			printf("\n");
+			
+			degree = atoi(inputString);
+			
+			/* Loop to filter invalid input */
+				while (degree == 0) {
+					printf("\"%s\" is not a valid integer, please try again.\n", inputString);
+					printf("\n*********************************************");
+					
+						printf("\n\nWhat is the highest power of x: ");
+						scanf("%s", &inputString);
+						printf("\n");
+						
+						degree = atoi(inputString); 
+				} 
 			
 			
 			/* Initiates the arrays for the equation */
@@ -43,7 +65,7 @@
 					printf("\n\n*******************************");
 					printf("\n\nWould you like to do anothe 1 for yes, 0 for no: ");
 					scanf("%d", &active);
-				}
+			}
 	}
 	
 		int calculate(int degreeCount, int pArray[], int cArray[], int resArray[], int xVal) {
