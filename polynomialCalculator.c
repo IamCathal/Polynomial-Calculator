@@ -62,8 +62,8 @@
 				
 					calculate(degree, powerArray, coeffArray, resultArray,  xValue);
 					
-					printf("\n\n*******************************");
-					printf("\n\nWould you like to do anothe 1 for yes, 0 for no: ");
+					printf("\n\n*********************************************");
+					printf("\n\nWould you like to do another 1 for yes, 0 for no: ");
 					scanf("%d", &active);
 			}
 	}
